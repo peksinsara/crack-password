@@ -16,12 +16,12 @@ def guess_password():
             
 
 userInput=input('Please enter password: ')  
-regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+symbol_collection = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
 
-while (regex.search(userInput) != None): 
+while (symbol_collection.search(userInput) != None): 
     print('Text has special characters, please do not use them.')
     userInput=input('Please enter password: ')   
-    if(regex.search(userInput) == None): 
+    if(symbol_collection.search(userInput) == None): 
         print(guess_password()) 
  
 
